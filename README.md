@@ -3,11 +3,12 @@ As its name,it's a Json Parser for C programming Language,It is json my prictice
   
 Thanks to `深剖向`(@510850111),without his video course,I can not make it.  
 His Video: https://www.bilibili.com/video/BV1j54y1i7Lq  
-
+  
 # How To Use?
-
+Please include zhis file `Json4C.h`,  
+  
 ## Parse
-
+  
 There is an json eample,  
 ```json
 {
@@ -21,8 +22,7 @@ There is an json eample,
     }
 }
 ```
-
-Please include zhis file `Json4C.h`,  
+  
 And add the following to your file:  
 ```c
 	const char* jc = "{\"name\":\"Jack Nimble\",\"format\":{\"type\":\"rect\",\"width\":1920,\"height\":1080,\"interlace\":false,\"frame rate\":24}}";
@@ -33,16 +33,17 @@ And add the following to your file:
 
 	printf("%s\n", name);
 ```
+  
 The Result:  
 ```
 Jack Nimble
 ```
-
+  
 ## Print
-
+  
 You should add some nodes,like zhis:  
 ```c
-Json4C* root = Json4C_CreateObject();
+	Json4C* root = Json4C_CreateObject();
 	Json4C* node1 = Json4C_CreateObject();
 	Json4C* node2 = Json4C_CreateObject();
 	Json4C* node3 = Json4C_CreateObject();
@@ -90,5 +91,6 @@ json:
         }
 }
 ```
+  
 # Attention
 REMEMBER TO FREE PONITERS!!!!!!!!!!!!!
